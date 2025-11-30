@@ -12,6 +12,7 @@ async function bootstrap() {
       transport: Transport.NATS,
       options: {
         servers: process.env.NATS_URL,
+        queue: `workflows-service`,
       },
     },
     {
@@ -21,7 +22,7 @@ async function bootstrap() {
   );
 
   await app.startAllMicroservices();
-  await app.listen(3001, '0.0.0.0');
+  await app.listen(3001);
   // await app.listen(process.env.port ?? 3001);
 }
 bootstrap();

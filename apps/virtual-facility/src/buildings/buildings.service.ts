@@ -62,9 +62,9 @@ export class BuildingsService {
   }
 
   async createWorkflow(buildingId: number) {
-    console.log(
+    /* console.log(
       JSON.stringify({ name: 'My Workflow', buildingId } as CreateWorkflowDto),
-    );
+    ); */
     /* const response = await fetch('http://workflows-service:3001/workflows', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
